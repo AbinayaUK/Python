@@ -19,6 +19,7 @@ print(gcd(a,b))"""
 
 print(gcd(int(input("Enter the 1st value : ")),int(input("Enter the 2nd value : "))))
 
+
 2)A number, a, is a power of b if it is divisible by b and a/b is a power of b.
 Write a function called is_power that takes parameters a and b and returns True if a is a power of b.
 Note: you will have to think about the base case.
@@ -68,11 +69,95 @@ print(factI(4))
 4)Write a program that computes the decimal equivalent of the binary number 10011?
 
 
+5)Implement a function that meets the specification below. Use a try-except block.
+
+def sumDigits(s):
+	"""Assumes s is a string
+	Returns the sum of the decimal digits in s
+	For example, if s is 'a2b3c' it returns 5"""
+	
+
+def sumOfDigits(s):
+    list1 = []
+    try:
+        for i in s:
+            if i.isdigit():
+                list1.append(int(i))
+        print(sum(list1))
+
+    except ValueError as ve:
+        print("Invalid ")
+
+s='a2b3c'
+sumOfDigits(s)
 
 
 
 
+6)Implement a function that satisfies the specification. Use a try-except block.
 
+def findAnEven(l):
+	"""Assumes l is a list of integers
+	Returns the first even number in l
+	Raises ValueError if l does not contain an even number"""
+
+
+def findAnEven(list1):
+    try:
+        for i in list1:
+            if i%2==0:
+                print("The even numbers are ",i)
+                exit()
+        raise ValueError
+
+    except ValueError as ve:
+        print("Enter atleast one even ")
+
+list1=[1,3,5,9]
+findAnEven(list1)
+
+
+
+7)A palindrome is a word that is spelled the same backward and forward, like "Malayalam" and "Noon" . 
+Recursively, a word is a palindrome if the first and last letters are the same and the middle is a palindrome. 
+Write a function called is_palindrome that takes a string argument and returns True if it is a palindrome and False otherwise. 
+Remember that you can use the built-in function len to check the length of a string.
+Use the function definition
+
+def isPalindrome(s):
+	"""Assumes s is a str
+	Returns True if s is a palindrome; False otherwise.
+	Punctuation marks, blanks, and capitalization are
+	ignored."""
+
+
+def isPalindrome(s):
+    s1=s[::-1]
+    if s==s1:
+        print(s)
+    else:
+        print("not a palandrome")
+
+
+s=str(input("Enter the string "))
+isPalindrome(s)
+
+
+
+------------------------------------or--------------------------------
+
+
+
+def is_palindrome(s):
+    if len(s)==1:
+        print("palindrome")
+    elif len(s) > 1:
+        if s[0]==s[-1]:
+            print('palindrome')
+    else:
+        print('not a palindrome')
+s = input("enter the string: ")
+is_palindrome(s)
 
 
 
