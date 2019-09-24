@@ -53,22 +53,6 @@ For example : "The quick brown fox jumps over the lazy dog"
 
 
 
-def is_pangram(a):
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-    b= ""
-    for char in a
-       if char in alphabet:
-            b+= char
-    for char in alphabet:
-        if char not in a:
-            print b,alphabet
-            return False
-
-    return True
-			
-    
-a="The quick brown fox jumps over the lazy dog"
-func(a)
 
 
 4)Write a Python program that accepts a hyphen-separated sequence of words as input and 
