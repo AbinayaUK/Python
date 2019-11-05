@@ -1,0 +1,164 @@
+1:For the below binary number , count the Occurrence of sequence '101'
+
+10101010100111101
+
+n="10101010100111101"
+count=0
+for i in range(len(n)-1):
+  if n[i]=="1" and n[i+1]=="0" and n[i+2]=="1":
+    count=count+1
+print(count)
+
+======================================================================================================================================= 
+
+2: For the below matrix , calculate both the diagonal and print the value.
+(Hint: consider each row as a list object)
+ 
+
+3 8 7
+
+8 7 9
+
+1 6 0
+
+
+li=[[3,8,7],[8,7,9],[1,6,0]]
+n=3
+count=0
+for i in range(0,n):
+  for j in range(0,n):
+    if i==j:
+      count=count+li[i][j]
+print(count)
+
+
+========================================================================================================================================
+ 
+
+3 :Rotate the above matrix by 90 degree anticlockwise
+
+hint :convert row to column and column to row
+
+ 
+
+4: The string abcabcabc........ goes till 1111 . print the number of Occurrence of 'ca'
+
+ 
+
+5: Convert the string as below.
+
+input : abcDEwQ
+
+output: ABCdeWq
+
+Method I
+=========
+input="abcDEwQ"
+print(input.swapcase())
+
+Method II
+========= 
+
+name=input("Enter the string : ")
+name_list = []
+
+for i in name:
+    if i.isupper():
+        name_list.append(i.lower())
+    else: 
+      name_list.append(i.upper())
+
+print(''.join(name_list))
+
+========================================================================================================================================
+
+6: Find the ordered longest alphabetical sequence.
+
+abccdefabcdefae
+
+ 
+========================================================================================================================================
+7:Find the sum of multiples of 3 and 5 between 1 to 1000
+
+sum = 0
+for x in range(1, 1000):
+  if x % 3 == 0 and x % 5 == 0:
+    sum = sum+x
+print(sum)
+
+==========================================================================================================================================
+ 
+
+8: Display the phone number as below and also print the last 4 digit in ascending order
+
+input : 9993452133
+
+output :xxx-xxx-xxxx
+======================================================================================================================================== 
+
+9: "There are 26 alphabets in English out of which 5 are vowels and 21 are consonants"
+
+Count the sum of numbers in the above statement using regular expression
+
+import re
+pattern="\d+"
+str1="There are 26 alphabets in English out of which 5 are vowels and 21 are consonants"
+res=re.findall(pattern,str1)
+count=0
+for i in res:
+  count=count+int(i)
+print(count)
+
+=======================================================================================================================================
+
+ 
+
+10.anagram : sample inputs : tear, rate ; Find if these words are anagram or not. 
+Program should accept two inputs from user.
+
+
+s1=input("Enter first string:")
+s2=input("Enter second string:")
+if(sorted(s1)==sorted(s2)):
+      print("The strings are anagrams.")
+else:
+      print("The strings aren't anagrams.")
+
+======================================================================================================================================
+
+11;With a given integral number n, change the program to generate a dictionary that contains 
+(i, cube of i) such that is an integral number between 1 and n (both included).
+
+and then the program should print the dictionary.
+
+Suppose the following input is supplied to the program:
+
+7
+
+Then, the output should be:
+
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 373}
+
+Take the input from the user via console.
+
+=======================================================================================================================================
+
+12: find if the below numbers are Armstrong number
+
+ 
+
+a: 153
+
+b:1634
+
+c: 876
+
+
+
+n=int(input("Enter any number: "))
+a=list(map(int,str(n)))
+b=list(map(lambda x:x**3,a))
+if(sum(b)==n):
+    print("The number is an armstrong number. ")
+else:
+    print("The number not an arsmtrong number. ")
