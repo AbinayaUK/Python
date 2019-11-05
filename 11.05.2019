@@ -94,6 +94,19 @@ print(sum)
 input : 9993452133
 
 output :xxx-xxx-xxxx
+
+num="9993452133"
+s1=num[0:3]
+print(s1)
+s2=num[3:6]
+print(s2)
+s3=num[6:]
+print(s3)
+sort=sorted(s3)
+print(sort)
+print(s1+"-"+s2+"-"+"".join(sort))
+
+
 ======================================================================================================================================== 
 
 9: "There are 26 alphabets in English out of which 5 are vowels and 21 are consonants"
