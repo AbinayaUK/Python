@@ -166,15 +166,11 @@ print(dict1)
 
 12: find if the below numbers are Armstrong number
 
- 
-
 a: 153
 
 b:1634
 
 c: 876
-
-
 
 n=int(input("Enter any number: "))
 a=list(map(int,str(n)))
